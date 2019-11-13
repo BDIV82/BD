@@ -1,0 +1,31 @@
+@startuml
+
+Expert -up-|> User
+Analyst -up-|> User
+Expert --> (Approves questions for the polls)
+Expert --> (Answers on the questions of users)
+Expert --> (Creates the results of the polls)
+Analyst --> (Creating polls)
+Analyst --> (Editing polls)
+Analyst --> (Analysing of received data)
+User --> (Answering polls)
+User --> (Editing personal data)
+(Approves questions for the polls)  --> (Checks if given question for the poll are okey)
+(Checks if given question for the poll are okey) --> (Aproves them if it is okey)
+(Checks if given question for the poll are okey) --> (Does not approves if it is not acceptable)
+(Answers on the questions of users) --> (Reads questions of users)
+(Answers on the questions of users) --> (Answers as an expert)
+(Creates the results of the polls) --> (Check given by analyst data about poll)
+(Creates the results of the polls) --> (Makes his conclusion about poll as an expert)
+(Creating polls) --> (Creating questions for polls)
+(Creating polls) --> (Collecting all questions to the poll)
+(Editing polls) --> (Editing questions in polls)
+(Editing polls) --> (Editing number of questions)
+(Analysing of received data) --> (Collecting of the data got from users)
+(Analysing of received data) --> (Summing up of data)
+
+
+
+
+
+@enduml
